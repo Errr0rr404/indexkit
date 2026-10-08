@@ -1,0 +1,21 @@
+{
+  "project": ".",
+  "origin": "https://example.com",
+  "siteUrl": "sc-domain:example.com",
+  "budget": 200,
+  "sitemapOut": "public/sitemap.xml",
+  "sitemapPublicUrl": "https://example.com/sitemap.xml",
+  "googleCredentials": "./google-credentials.json",
+  "samples": {
+    "slug": ["start"]
+  },
+  "indexnow": {
+    "key": "replace-with-your-own-key",
+    "keyLocation": "https://example.com/replace-with-your-own-key.txt"
+  },
+  "minimax": {
+    "discover": true,
+    "classify": true,
+    "model": "MiniMax-M3"
+  }
+}
