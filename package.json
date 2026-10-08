@@ -1,0 +1,25 @@
+{
+  "name": "indexkit",
+  "version": "0.1.0",
+  "description": "Discover app routes, submit a sitemap, and track Google index status.",
+  "type": "module",
+  "bin": {
+    "indexkit": "./dist/cli.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.8"
+  },
+  "license": "MIT"
+}
