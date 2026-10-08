@@ -1,5 +1,6 @@
 import type { Framework, RawRoute, RouteRecord } from "./types.js";
 import { discoverRaw } from "./discover/detect.js";
+import { candidateFiles } from "./minimax.js";
 import { finalizeRoutes } from "./routes.js";
 
 export interface RouteModel {
@@ -18,7 +19,7 @@ export async function collectRoutes(opts: {
   if (raw.length === 0 && opts.model) {
     raw = await opts.model.discoverFromFiles({
       project: opts.project,
-      files: opts.filesForModel ?? [],
+      files: opts.filesForModel ?? candidateFiles(opts.project),
     });
   }
   let routes = finalizeRoutes(raw, opts.samples);
